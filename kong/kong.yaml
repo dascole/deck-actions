@@ -16,7 +16,7 @@ services:
     id: c00647e6-76a1-4a6c-b906-ca656306d86c
     path_handling: v0
     paths:
-    - /echo
+    - /test
     preserve_host: false
     protocols:
     - http
