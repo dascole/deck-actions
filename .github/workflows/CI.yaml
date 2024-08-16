@@ -24,8 +24,8 @@ jobs:
         command: "validate"
         options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }}  --konnect-token ${{ secrets.KONG_HEADERS }}" 
         kong_workspaces: "kong"
-    - name: decK diff
-      id: decK_diff
+    - name: decK sync
+      id: decK_sync
       uses: ./
       with:
         command: "diff"
