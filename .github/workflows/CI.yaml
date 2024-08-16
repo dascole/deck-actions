@@ -28,6 +28,13 @@ jobs:
       id: decK_diff
       uses: ./
       with:
+        command: "sync"
+        options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }} --konnect-token ${{ secrets.KONG_HEADERS }}" 
+        kong_workspaces: "kong"
+    - name: decK diff
+      id: decK_diff
+      uses: ./
+      with:
         command: "diff"
         options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }} --konnect-token ${{ secrets.KONG_HEADERS }}" 
         kong_workspaces: "kong"
