@@ -12,3 +12,17 @@ services:
   read_timeout: 60000
   retries: 5
   write_timeout: 60000
+  routes:
+  - https_redirect_status_code: 426
+    id: c00647e6-76a1-4a6c-b906-ca656306d86c
+    path_handling: v0
+    paths:
+    - /test
+    preserve_host: false
+    protocols:
+    - https
+    - http 
+    regex_priority: 1
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
