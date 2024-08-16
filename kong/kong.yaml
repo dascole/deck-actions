@@ -1,0 +1,28 @@
+_format_version: "3.0"
+_konnect:
+  control_plane_name: default
+services:
+- connect_timeout: 60000
+  enabled: true
+  host: scooterlabs.com
+  id: 67526574-e435-4069-8666-52a7f128ba97
+  path: /echo
+  port: 80
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: c00647e6-76a1-4a6c-b906-ca656306d86c
+    path_handling: v0
+    paths:
+    - /echo
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
