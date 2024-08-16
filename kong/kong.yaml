@@ -20,7 +20,6 @@ services:
     preserve_host: false
     protocols:
     - https
-    - http 
     regex_priority: 1
     request_buffering: true
     response_buffering: true
