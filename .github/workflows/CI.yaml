@@ -16,17 +16,18 @@ jobs:
       uses: ./
       with:
         command: "ping"
-        options: "--konnect-control-plane-name='default' --konnect-token ${{ secrets.KONG_HEADERS }}"
+        options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }} --konnect-token ${{ secrets.KONG_HEADERS }}"
     - name: decK validate
       id: decK_validate
       uses: ./
       with:
         command: "validate"
-        options: "--konnect-control-plane-name='default' --konnect-token ${{ secrets.KONG_HEADERS }}" 
+        options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }}  --konnect-token ${{ secrets.KONG_HEADERS }}" 
         kong_workspaces: "kong"
     - name: decK sync
       id: decK_sync
       uses: ./
       with:
         command: "diff"
-        options: "--konnect-control-plane-name='default' --konnect-token ${{ secrets.KONG_HEADERS }}" 
+        options: "--konnect-control-plane-name ${{ secrets.KONG_ADDR }}  --konnect-token ${{ secrets.KONG_HEADERS }}" 
+        kong_workspaces: "kong"
