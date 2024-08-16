@@ -19,7 +19,6 @@ services:
     - /test
     preserve_host: false
     protocols:
-    - http
     - https
     regex_priority: 0
     request_buffering: true
