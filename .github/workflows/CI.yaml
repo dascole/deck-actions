@@ -35,6 +35,6 @@ jobs:
       id: decK_sync
       uses: ./
       with:
-        command: "gateway sync"
+        command: "sync"
         options: "--kong-addr ${{ secrets.KONG_ADDR }} --headers ${{ secrets.KONG_HEADERS }}" 
         kong_workspaces: "kong"
